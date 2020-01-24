@@ -12,6 +12,13 @@
     <Folder Include="$(MSBuildThisFileDirectory)Access\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)MySQL\" />
     <Compile Include="$(MSBuildThisFileDirectory)MySQL\MySQLConnection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Access\AccesConnection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Access\Database_GIP.accdb" />
   </ItemGroup>
 </Project>
