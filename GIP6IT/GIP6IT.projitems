@@ -9,7 +9,11 @@
     <Import_RootNamespace>GIP6IT</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Access\" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)MySQL\" />
+    <Compile Include="$(MSBuildThisFileDirectory)MySQL\MySQLConnection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Access\AccesConnection.cs" />
