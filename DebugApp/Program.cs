@@ -10,6 +10,12 @@ namespace DebugApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine($"Connecting to MySQL server: {Database.MySQL.MySQLConnection.Connect().Connected}");
+
+
+
+
+            Console.ReadLine();
         }
     }
 }

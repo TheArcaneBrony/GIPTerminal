@@ -10,6 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Access\" />
-    <Folder Include="$(MSBuildThisFileDirectory)MySQL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)MySQL\MySQLConnection.cs" />
   </ItemGroup>
 </Project>
