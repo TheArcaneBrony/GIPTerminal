@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Database.MySQL;
+using System;
 
 namespace DebugApp
 {
@@ -10,11 +7,12 @@ namespace DebugApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Connecting to MySQL server: {Database.MySQL.MySQLConnection.Connect().Connected}");
+            MySQLConnection conn;
+            Console.WriteLine($"Connecting to MySQL server: {(conn = MySQLConnection.Connect()).Connected}");
 
 
 
-
+            Console.WriteLine($"Amount of people in workshop 1 doing PC Building: {conn.GetNumWorkshop(1, "PC")}");
             Console.ReadLine();
         }
     }

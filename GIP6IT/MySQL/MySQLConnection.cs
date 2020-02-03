@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using MySql.Data.MySqlClient;
-using Renci.SshNet.Security.Cryptography;
+﻿using MySql.Data.MySqlClient;
 
 namespace Database.MySQL
 {
@@ -12,7 +7,7 @@ namespace Database.MySQL
         private MySqlConnection connection;
         private static string server = "thisisit.cc";
         private static string database = "thisisit-workshops";
-        private static string uid="thisisit";
+        private static string uid="ThisIsIt";
         private static string password = "FunnyMoments420";
         public bool Connected = false;
         public static MySQLConnection Connect()
@@ -21,27 +16,22 @@ namespace Database.MySQL
             try
             {
                 conn.connection = new MySqlConnection($"SERVER={server};UID={uid};PASSWORD={password};DATABASE={database}");
+                conn.connection.Open();
                 conn.Connected = true;
             }
             catch
             {
                 throw;
-                return conn;
             }
             return conn;
         }
-        public bool Insert()
+        public int GetNumWorkshop(int WorkshopNumber, string Code)
         {
-            return false;
-        }
-        public void Get(string query, string table)
-        {
-            MySqlCommand cmd = new MySqlCommand($"select {query} from {table}");
-        }
-        public int GetNum()
-        {
-
-            return 0;
+            MySqlCommand cmd = new MySqlCommand($"select * from inschrijvingen where workshop{WorkshopNumber} = '{Code}'", connection);
+            int i = 0;
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read()) i++;
+            return i;
         }
     }
 }
