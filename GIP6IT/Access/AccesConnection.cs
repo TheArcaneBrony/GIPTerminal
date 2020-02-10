@@ -17,25 +17,25 @@ namespace Database.Acces
             try
             {
                 Bruh.conn.Open();
-                Bruh.Connected = true;
             }
             catch
             {
-                throw;
+
             }
-            
+            Bruh.conn.Close();
             return Bruh;
         }
 
         public bool Insert(string Naam, string Email, string Workshop1, string Workshop2)
         {
-            //conn.Open();
-            String my_query = $"INSERT INTO Inschrijvingen(Naam,E-mail,Workshop1, Workshop2)VALUES({Naam},{Email},{Workshop1},{Workshop2})";
-            OleDbCommand cmd = new OleDbCommand(my_query, conn);
+            conn.Open();
+            String my_querry = $"INSERT INTO Inschrijvingen(Naam,E-mail,Workshop1, Workshop2)VALUES({Naam},{Email},{Workshop1},{Workshop2})";
+            OleDbCommand cmd = new OleDbCommand(my_querry, conn);
             cmd.ExecuteNonQuery();
-            //    conn.Close();
+            conn.Close();
 
-            return true;
+
+            return false;
         }
 
         public void Get(string Naam)

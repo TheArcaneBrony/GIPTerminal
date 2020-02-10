@@ -19,8 +19,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Access\AccesConnection.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Access\Database_GIP.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="$(MSBuildThisFileDirectory)Access\Database_GIP.accdb" />
   </ItemGroup>
 </Project>
