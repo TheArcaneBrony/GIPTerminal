@@ -13,7 +13,7 @@ namespace Database.Acces
         public static AccesConnection Connect()
         {
             AccesConnection Bruh = new AccesConnection();
-            Bruh.conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data source= Database_GIP.accdb";
+            Bruh.conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data source=access\Database_GIP.accdb";
             try
             {
                 Bruh.conn.Open();
