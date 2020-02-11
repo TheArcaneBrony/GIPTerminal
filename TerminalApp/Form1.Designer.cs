@@ -103,9 +103,9 @@
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label4.Location = new System.Drawing.Point(98, 147);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 29);
+            this.label4.Size = new System.Drawing.Size(88, 29);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Achternaam:";
+            this.label4.Text = "E-mail:";
             // 
             // LastNameTBox
             // 
